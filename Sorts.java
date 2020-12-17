@@ -26,5 +26,26 @@ public class Sorts{
 
  }
 
+ public static void selectionSort(int[] data) {
+   int limit = 0;
+   int temp = 0;
+   int currentlowest = 0;
+   int lowestval = 0;
+   while (limit < data.length) {
+     currentlowest = data[limit];
+     lowestval = limit;
+     for (int i = limit; i < data.length; i++) {
+       if (data[i] < currentlowest) {
+         currentlowest = data[i];
+         lowestval = i;
+       }
+     }
+     temp = currentlowest;
+     data[lowestval] = data[limit];
+     data[limit] = temp;
+     limit++;
+   }
+ }
+
 
 }
