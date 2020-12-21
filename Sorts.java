@@ -50,16 +50,14 @@ public class Sorts{
  public static void insertionSort(int[] data) {
    int iterate = 0;
    int tempiterate = 0;
-   int currentval = 0;
    int temp = 0;
    for (int i = 1; i < data.length; i++) {
      iterate = i;
      tempiterate = iterate;
-     currentval = data[i];
-     while (tempiterate > 0 && data[i] < data[i-1]) {
-       temp = data[i];
-       data[i] = data[i-1];
-       data[i-1] = temp;
+     while (tempiterate > 0 && data[tempiterate] < data[tempiterate-1]) {
+       temp = data[tempiterate];
+       data[tempiterate] = data[tempiterate-1];
+       data[tempiterate-1] = temp;
        tempiterate--;
      }
    }
